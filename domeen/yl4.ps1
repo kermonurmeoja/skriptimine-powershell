@@ -1,12 +1,11 @@
 ﻿# Skript kustutab AD kasutaja, küsides kasutajalt ees- ja perekonnanime.
 
 # Tsüklis küsitakse ees- ja perekonnanime, luuakse see vormi eesnimi.perekonnanimi ja kontrollitakse, kas on sisestatud ladina sümbolites
-
 do 
 {
     $eesnimi = Read-Host "Sisesta eesnimi "
     $perenimi = Read-Host "Sisesta perekonnanimi "
-    $taisnimi = "$eesnimi $perenimi".ToLower()
+
     # lisaks muudame täpitähed tavatähtedeks
     $kasutajanimi = "$eesnimi.$perenimi".ToLower() -replace 'ä', 'a' -replace 'ö', 'o' -replace 'ü', 'u' -replace 'õ', 'o'
 }until($kasutajanimi -match "^[a-z\.\-]+$")
