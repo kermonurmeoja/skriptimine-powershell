@@ -1,17 +1,21 @@
-# Skript loob AD kasutaja, küsides kasutajalt ees- ja perekonnanime.
+﻿# Skript loob AD kasutaja, küsides kasutajalt ees- ja perekonnanime.
 
 # Siin saab lisada muutujad, et ei peaks koodis sees muutma.
 $OU = "OU=SV-KOOL,DC=sv-kool,DC=local" # määrame, kuhu kasutajad luuakse
 $parool = "Parool1!" # loome loodavatele kasutajatele parooli
 
 # Tsüklis küsitakse ees- ja perekonnanime, luuakse kasutajanimi eesnimi.perekonnanimi ja kontrollitakse, kas on sisestatud ladina sümbolites
-
 do 
 {
     $eesnimi = Read-Host "Sisesta eesnimi "
     $perenimi = Read-Host "Sisesta perekonnanimi "
-    $taisnimi = "$eesnimi $perenimi".ToLower()
-    # lisaks muudame täpitähed tavatähtedeks
+
+    # Teeme kenama formaadi.
+    $eesnimi = $eesnimi.Substring(0, 1).ToUpper() + $eesnimi.Substring(1).ToLower()
+    $perenimi = $perenimi.Substring(0, 1).ToUpper() + $perenimi.Substring(1).ToLower()
+    $taisnimi = "$eesnimi $perenimi"
+
+    # Lisaks muudame täpitähed tavatähtedeks
     $kasutajanimi = "$eesnimi.$perenimi".ToLower() -replace 'ä', 'a' -replace 'ö', 'o' -replace 'ü', 'u' -replace 'õ', 'o'
 }until($kasutajanimi -match "^[a-z\.\-]+$")
 
