@@ -9,7 +9,8 @@ Aine haldustegevuste automatiseerimine tunniülesanded PowerShellis.
 * [__yl3.ps1__](https://github.com/kermonurmeoja/skriptimine-powershell/blob/main/domeen/yl3.ps1) – Skript loob AD kasutaja, küsides kasutajalt ees- ja perekonnanime. Kasutajanime formaat on "eesnimi.perekonnanimi", täisnimi on kujul "Eesnimi Perekonnanimi". Parooliks määratakse "Parool1!". Parool tuleb esimest korda sisselogides muuta.
 * [__yl4.ps1__](https://github.com/kermonurmeoja/skriptimine-powershell/blob/main/domeen/yl4.ps1) – Skript kustutab AD kasutaja, küsides kasutajalt ees- ja perekonnanime.
 * [__yl5.ps1__](https://github.com/kermonurmeoja/skriptimine-powershell/blob/main/domeen/yl5.ps1) – Skript loob AD kasutaja, küsides kasutajalt ees- ja perekonnanime. Kasutajanime formaat on "eesnimi.perekonnanimi", täisnimi on kujul "Eesnimi Perekonnanimi". Genereeritakse suvaline parool ning see salvestatakse kasutajanimi.csv faili. Parool tuleb esimest korda sisselogides muuta.
-* [__yl6.ps1__](https://github.com/kermonurmeoja/skriptimine-powershell/blob/main/domeen/yl6.ps1) – Skript varundab arvutis eksisteerivate kasutajate kodukataloogid kausta C:\Backup. 
+* [__yl6.ps1__](https://github.com/kermonurmeoja/skriptimine-powershell/blob/main/domeen/yl6.ps1) – Skript varundab arvutis eksisteerivate kasutajate kodukataloogid kausta C:\Backup.
+* [__yl7.ps1__](https://github.com/kermonurmeoja/skriptimine-powershell/blob/main/domeen/yl7.ps1) – Skript lähtestab AD kasutaja parooli, määrab uueks parooliks "Parool1!" ning nõuab uue parooliga sisselogimisel uut parooli.
 
 ## Põhipraktikumid (Powershell skriptid)
 * [__praks1.ps1__](https://github.com/kermonurmeoja/skriptimine-powershell/blob/main/praks1.ps1) – Skript liidab kahe array sisu kokku ning loob vastavalt tulemusele kolmanda array. 
